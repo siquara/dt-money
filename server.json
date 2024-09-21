@@ -47,6 +47,14 @@
       "type": "outcome",
       "createdAt": "2024-09-21T21:00:06.355Z",
       "id": 6
+    },
+    {
+      "description": "Desenvolvimento de app",
+      "price": 1000,
+      "category": "Aplicativo",
+      "type": "income",
+      "createdAt": "2024-09-21T21:23:58.446Z",
+      "id": 7
     }
   ]
 }
