@@ -46,7 +46,11 @@ export const Content = styled(Dialog.Content)`
       margin-top: 1.25rem;
       cursor: pointer;
       transition: background-color 0.2s;
-      &:hover {
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+      &:not(:disabled):hover {
         background: ${(props) => props.theme["green-700"]};
       }
     }
@@ -87,7 +91,7 @@ export const TransactionTypeButton = styled(
   border-radius: 6px;
   cursor: pointer;
   border: 0;
-  color: ${(props) => props.theme["gray-300"]};
+  color: ${(props) => props.theme["gray-100"]};
   svg {
     color: ${(props) =>
       props.variant === "income"
