@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext } from "react";
 import { Header } from "../../components/Header/Header";
 import { Summary } from "../../components/Summary/Summary";
 import { SearchForm } from "./components/SearchForm/SearchForm";
@@ -7,21 +7,10 @@ import {
   TransactionsContainer,
   TransactionsTable,
 } from "./styles";
-import { TransactionsProps } from "./types";
+import { TransactionsContext } from "../../contexts/TransactionsContext";
 
 export function Transactions() {
-  const [transactions, setTransactions] = useState<TransactionsProps[]>([]);
-  async function fetchTransactions() {
-    const response = await fetch("http://localhost:3333/transactions");
-    const data = await response.json();
-
-    setTransactions(data);
-  }
-
-  useEffect(() => {
-    fetchTransactions();
-  }, []);
-
+  const { transactions } = useContext(TransactionsContext);
   return (
     <div>
       <Header />
