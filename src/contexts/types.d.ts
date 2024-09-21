@@ -9,7 +9,7 @@ export interface TransactionsProps {
 
 export interface TransactionsContexType {
   transactions: TransactionsProps[];
-  //fetchTransactions: () => Promise<void>;
+  fetchTransactions: (query?:string) => Promise<void>;
 }
 
 export interface TransactionsProviderProps {
