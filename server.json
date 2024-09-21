@@ -15,7 +15,22 @@
         "category": "Alimentação",
         "price": 50,
         "createdAt": "2024-09-21T13:30:59.843Z"
-      }
-
+    },
+    {
+        "id": 3,
+        "description": "Aluguel",
+        "type": "outcome",
+        "category": "Moradia",
+        "price": 1000,
+        "createdAt": "2024-09-21T13:20:59.843Z"
+    },
+    {
+        "id": 4,
+        "description": "Salário",
+        "type": "income",
+        "category": "Salário",
+        "price": 2000,
+        "createdAt": "2024-09-21T13:10:59.843Z"
+    }
   ]
 }

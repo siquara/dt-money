@@ -5,6 +5,25 @@ import { useContext } from "react";
 
 export function Summary() {
   const { transactions } = useContext(TransactionsContext);
+
+  /// convertendo o array de transactions em um objeto com entradas, saidas e total {income: 0, outcome: 0, total: 0}
+  const sumary = transactions.reduce(
+    (acc, transaction) => {
+      if (transaction.type === "income") {
+        acc.income += transaction.price;
+      } else {
+        acc.outcome += transaction.price;
+      }
+      acc.total = acc.income - acc.outcome;
+
+      return acc;
+    },
+    {
+      income: 0,
+      outcome: 0,
+      total: 0,
+    }
+  );
   return (
     <SummaryContainer>
       <SummaryCard>
@@ -12,21 +31,21 @@ export function Summary() {
           <span>Entradas</span>
           <ArrowCircleUp size={32} color="#00b37e" />
         </header>
-        <strong>R$ 1000,00</strong>
+        <strong>{sumary.income}</strong>
       </SummaryCard>
       <SummaryCard>
         <header>
           <span>Saídas</span>
           <ArrowCircleDown size={32} color="#f75a68" />
         </header>
-        <strong>R$ 1000,00</strong>
+        <strong>{sumary.outcome}</strong>
       </SummaryCard>
       <SummaryCard variant="green">
         <header>
           <span>Total</span>
           <CurrencyDollar size={32} color="#fff" />
         </header>
-        <strong>R$ 1000,00</strong>
+        <strong>{sumary.total}</strong>
       </SummaryCard>
     </SummaryContainer>
   );
