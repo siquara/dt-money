@@ -55,6 +55,14 @@
       "type": "income",
       "createdAt": "2024-09-21T21:23:58.446Z",
       "id": 7
+    },
+    {
+      "description": "Curso",
+      "price": 300,
+      "category": "Estudos",
+      "type": "outcome",
+      "createdAt": "2024-09-22T14:33:48.833Z",
+      "id": 8
     }
   ]
 }

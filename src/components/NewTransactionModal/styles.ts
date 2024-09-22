@@ -9,6 +9,7 @@ export const Overlay = styled(Dialog.Overlay)`
   inset: 0;
   background: rgba(0, 0, 0, 0.75);
 `;
+
 export const Content = styled(Dialog.Content)`
   min-width: 32rem;
   border-radius: 6px;
@@ -18,6 +19,12 @@ export const Content = styled(Dialog.Content)`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  
+  @media (max-width: 768px) {
+    min-width: 90%;
+    padding: 2rem;
+  }
+
   form {
     margin-top: 2rem;
     display: flex;
@@ -73,6 +80,10 @@ export const TransactionType = styled(RadioGroup.Root)`
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   margin-top: 0.5rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 interface TransactionTypeButtonProps {
