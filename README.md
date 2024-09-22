@@ -11,7 +11,7 @@ O **DT Money** é um projeto desenvolvido no curso da RocketSeat para o controle
 - **Resumo Financeiro**: Veja o saldo total, além das somas de todas as entradas e saídas.
 
 ## Tecnologias Utilizadas
-[![My Skills](https://skillicons.dev/icons?i=typescript,react,redux,styledcomponents,git,github)](https://github.com/seu-usuario)
+[![My Skills](https://skillicons.dev/icons?i=typescript,react,redux,styledcomponents,git,github)](https://github.com/siquara)
 
 ## Instalação
 
@@ -20,7 +20,7 @@ Para rodar o DT Money em sua máquina local, siga os passos abaixo:
 1. **Clone o Repositório**
 
     ```bash
-    git clone https://github.com/seu-usuario/dt-money.git
+    git clone https://github.com/siquara/dt-money.git
     ```
 
 2. **Navegue para o Diretório do Projeto**
