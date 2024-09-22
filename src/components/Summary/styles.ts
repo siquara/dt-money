@@ -10,6 +10,10 @@ export const SummaryContainer = styled.section`
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-top: -5rem;
+
+  @media (max-width: 840px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 interface SummaryCardProps {
@@ -45,3 +49,5 @@ ${(props) =>
       background: ${props.theme["red-700"]};
     `}
 `;
+
+
